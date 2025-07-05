@@ -3,6 +3,7 @@
 
 #include "Pawns/TD1_TowerPawn.h"
 #include "AbilitySystemComponent.h"
+#include "AbilitySystem/Attributes/TD1_TowerAS.h"
 
 // Sets default values
 ATD1_TowerPawn::ATD1_TowerPawn()
@@ -14,6 +15,8 @@ ATD1_TowerPawn::ATD1_TowerPawn()
 	RootComponent = StaticMeshComp;
 
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>("AbilitySystemComp");
+
+	TowerAttributeSet = CreateDefaultSubobject<UTD1_TowerAS>("TowerAttributeSet");
 
 }
 

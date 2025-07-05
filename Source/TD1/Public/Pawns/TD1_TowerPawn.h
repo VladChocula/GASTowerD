@@ -10,6 +10,7 @@
 class UAbilitySystemComponent;
 class UGameplayAbility;
 class UGameplayEffect;
+class UTD1_TowerAS;
 
 UCLASS()
 class TD1_API ATD1_TowerPawn : public APawn, public IAbilitySystemInterface
@@ -40,6 +41,9 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Category = "GAS")
 	TSubclassOf<UGameplayEffect> DefaultEffect;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "GAS", meta = (AllowPrivateAccess = "true"))
+	UTD1_TowerAS* TowerAttributeSet;
 
 	//Inherited via IAbilitySystemInterface
 	UAbilitySystemComponent* GetAbilitySystemComponent() const override;
